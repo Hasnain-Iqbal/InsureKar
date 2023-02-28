@@ -134,23 +134,26 @@
     <section class="wrapper bg-light">
       <div class="container pb-14 pb-md-16">
         <div class="row">
-          <div class="col-lg-7 col-xl-6 col-xxl-5 mx-auto mt-n20">
+          <div class="col-lg-9 col-xl-9 mx-auto mt-n20">
             <div class="card">
               <div class="card-body p-11 text-center">
                 <h2 class="mb-3 text-start">Welcome</h2>
                 <p class="lead mb-6 text-start">Fill your details to get insurance.</p>
                 <form class="text-start mb-3">
-                  <div class="mb-4">
-                    <!-- <input type="email" class="form-control" placeholder="Email" id="loginEmail"> -->
-                    <label>Passport Copy</label><br/>
-                    <div style="padding: 0.3rem 1rem; border: 1px solid #083c8212; box-shadow: 0rem 0rem 1.25rem rgb(30 34 40 / 4%); border-radius: 0.4rem;">
-                      <input type="file" id="myFile" name="filename">
+                  <div class="d-flex justify-content-between">
+                    <div class="mb-4">
+                      <!-- <input type="email" class="form-control" placeholder="Email" id="loginEmail"> -->
+                      <label>Passport Copy</label><br/>
+                      <div style="padding: 0.3rem 1rem; border: 1px solid #083c8212; box-shadow: 0rem 0rem 1.25rem rgb(30 34 40 / 4%); border-radius: 0.4rem;">
+                        <input type="file" id="myFile" name="filename">
+                      </div>
                     </div>
-                  </div>
-                  <div class="mb-4">
-                    <label >CNIC Copy</label><br/>
-                    <div style="padding: 0.3rem 1rem; border: 1px solid #083c8212; box-shadow: 0rem 0rem 1.25rem rgb(30 34 40 / 4%); border-radius: 0.4rem;">
-                      <input type="file" id="myFile" name="filename" >
+                    <div class="mb-4">
+                      <label >CNIC Copy</label><br/>
+                      <div style="padding: 0.3rem 1rem; border: 1px solid #083c8212; box-shadow: 0rem 0rem 1.25rem rgb(30 34 40 / 4%); border-radius: 0.4rem;">
+                        <!--style="padding: 0.3rem 1rem; border: 1px solid #083c8212; box-shadow: 0rem 0rem 1.25rem rgb(30 34 40 / 4%); border-radius: 0.4rem;"-->
+                        <input type="file" id="myFile" name="filename" >
+                      </div>
                     </div>
                   </div>
                   <!-- <div >
@@ -159,60 +162,84 @@
                     <input type="text" class="form-control" value="12-31-2022">
                     
                   </div> -->
-                  <div class="md-form md-outline input-with-post-icon datepicker mb-4">
-                    <label >Travel Dates</label><br/>
-                    <input placeholder="Select date" type="date" id="travel_date" class="form-control">
+                  <div class="d-flex justify-content-between">
+                    <div class="md-form md-outline input-with-post-icon datepicker mb-4" style="width:374px">
+                      <label >Travel Dates</label><br/>
+                      <input placeholder="Select date" type="date" id="travel_date" class="form-control">
+                    </div>
+                    <div class="mb-4" style="width:374px">
+                      <label >Country To Travel</label><br/>
+                          <select class="selectpicker countrypicker form-select" 
+                                  data-flag="true" 
+                                  aria-label="Default select package"
+                                  data-live-search="true"
+                                  data-default="Pakistan"
+                                  data-flag="true"
+                                  >
+                          </select>
+                    </div>
                   </div>
-                  <div class="mb-4">
-                    <label >Country To Travel</label><br/>
-                        <select class="selectpicker countrypicker form-select" 
-                                data-flag="true" 
-                                aria-label="Default select package"
-                                data-live-search="true"
-                                data-default="Pakistan"
-                                data-flag="true"
-                                >
-                        </select>
+                  <div class="d-flex justify-content-between">
+                    <div class="mb-4" style="width:374px">
+                      <label >Package</label><br/>
+                      <select class="form-select" aria-label="Default select package">
+                        <option selected>Please select</option>
+                        <option value="1">Schengen</option>
+                        <option value="2">Worldwide</option>
+                        <option value="3">Rest Of the World</option>
+                      </select>
+                    </div>
+                    <div class="mb-4" style="width:374px">
+                      <label >Plan</label><br/>
+                      <select class="form-select" aria-label="Default select plan">
+                        <option selected>Please select</option>
+                        <option value="1">Silver</option>
+                        <option value="2">Gold</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="mb-4">
-                    <label >Package</label><br/>
-                    <select class="form-select" aria-label="Default select package">
-                      <option selected>Please select</option>
-                      <option value="1">Schengen</option>
-                      <option value="2">Worldwide</option>
-                      <option value="3">Rest Of the World</option>
-                    </select>
+                  <div class="d-flex justify-content-between">
+                    <div class="mb-4" style="width:374px">
+                      <label >Covid Coverage</label><br/>
+                      <select class="form-select" aria-label="Default select plan">
+                        <option selected>Please select</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                      </select>
+                    </div>
+                    <div>
+                    <label>Contact No.</label>
+                    <div class="form-floating password-field mb-4" style="width:374px">
+                      <input type="phone" class="form-control" placeholder="Phone Number" id="Phone">
+                      <label for="Phone">Phone Number</label>
+                    </div>
                   </div>
-                  <div class="mb-4">
-                    <label >Plan</label><br/>
-                    <select class="form-select" aria-label="Default select plan">
-                      <option selected>Please select</option>
-                      <option value="1">Silver</option>
-                      <option value="2">Gold</option>
-                    </select>
                   </div>
-                  <div class="mb-4">
-                    <label >Covid Coverage</label><br/>
-                    <select class="form-select" aria-label="Default select plan">
-                      <option selected>Please select</option>
-                      <option value="1">Yes</option>
-                      <option value="2">No</option>
-                    </select>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <label>Beneficiary Name and Relationship</label>
+                      <div class="form-floating password-field mb-4" style="width:374px">
+                        <input type="text" class="form-control" placeholder="Beneficiary Name" id="Beneficiary Name">
+                        <label for="Beneficiary Name">Beneficiary Name</label>
+                      </div>
+                    </div>
+                    <div class="md-form md-outline input-with-post-icon datepicker mb-4" style="width:374px">
+                      <label >Travel Dates</label><br/>
+                      <input placeholder="Select date" type="date" id="travel_date" class="form-control">
+                    </div>
                   </div>
-                  <label>Contact No.</label>
-                  <div class="form-floating password-field mb-4">
-                    <input type="phone" class="form-control" placeholder="Phone Number" id="Phone">
-                    <label for="Phone">Phone Number</label>
-                  </div>
-                  <label>Beneficiary Name and Relationship</label>
-                  <div class="form-floating password-field mb-4">
-                    <input type="text" class="form-control" placeholder="Beneficiary Name" id="Beneficiary Name">
-                    <label for="Beneficiary Name">Beneficiary Name</label>
-                  </div>
-                  <div class="md-form md-outline input-with-post-icon datepicker mb-4">
-                    <label >Travel Dates</label><br/>
-                    <input placeholder="Select date" type="date" id="travel_date" class="form-control">
-                  </div>
+                  <!-- </div>
+                  <label>Traveling Duration</label>
+                  <div class="mb-4" style="padding: 0.3rem 1rem; border: 1px solid #083c8212; box-shadow: 0rem 0rem 1.25rem rgb(30 34 40 / 4%); border-radius: 0.4rem;">
+                    <input type="time" id="appt" name="appt" class="form-select" style="border: none;">  
+                  </div> -->
+
+
+
+
+
+
+                  
                   <!-- <div class="form-floating password-field mb-4">
                     <input type="password" class="form-control" placeholder="Password" id="loginPassword">
                     <span class="password-toggle"><i class="uil uil-eye"></i></span>
@@ -243,13 +270,14 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="bg-navy text-inverse">
-    <div class="container pt-12 pt-lg-6 pb-13 pb-md-15">
-      <div class="d-lg-flex flex-row align-items-lg-center">
-        <h3 class="display-3 mb-6 mb-lg-0 pe-lg-20 pe-xl-22 pe-xxl-25 text-white">Find the best insurance plan for you or your business with Pakistan's leading insurance marketplace.</h3>
+    <div class="container pt-12 pt-lg-6 pb-13 pb-md-10">
+      <div class="d-lg-flex flex-row align-items-lg-center mb-2">
+        <h3 class="display-6 mb-6 mb-lg-0 pe-lg-20 pe-xl-22 pe-xxl-25 text-white">Find the best insurance plan for you or your business with Pakistan's leading insurance marketplace.</h3>
         <a href="contact.html" class="btn btn-primary rounded-pill mb-0 text-nowrap">Try It For Free</a>
       </div>
       <!--/div -->
-      <hr class="mt-11 mb-12" />
+      <p>Insurekar has made reasonable efforts to ensure the accuracy and error-free content of our website. However, we cannot guarantee that mistakes are not present. It is important to note that the contents of our website may not be suitable for every individual case.</p>
+      <hr class="mb-12 mt-0" />
       <div class="row gy-6 gy-lg-0">
         <div class="col-md-4 col-lg-3">
           <div class="widget">
@@ -293,11 +321,11 @@
         <div class="col-md-12 col-lg-3">
           <div class="widget">
             <h4 class="widget-title text-white mb-3">Our Newsletter</h4>
-            <p class="mb-5">Insurekar has made reasonable efforts to ensure the accuracy and error-free content of our website. However, we cannot guarantee that mistakes are not present. Insurekar reserves the right to modify website content without prior notice. It is important to note that the contents of our website may not be suitable for every individual case, and we do not warrant or guarantee the suitability of information, services or products for any particular use or purpose.</p>
+            <p class="mb-5">We do not warrant or guarantee the suitability of information, services or products for any particular use or purpose. Insurekar reserves the right to modify website content without prior notice.</p>
             <div class="newsletter-wrapper">
               <!-- Begin Mailchimp Signup Form -->
               <div id="mc_embed_signup2">
-                <form action="https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a" method="post" id="mc-embedded-subscribe-form2" name="mc-embedded-subscribe-form" class="validate dark-fields" target="_blank" novalidate>
+                <form action="#" method="post" id="mc-embedded-subscribe-form2" name="mc-embedded-subscribe-form" class="validate dark-fields" novalidate>
                   <div id="mc_embed_signup_scroll2">
                     <div class="mc-field-group input-group form-floating">
                       <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email Address" id="mce-EMAIL2">
